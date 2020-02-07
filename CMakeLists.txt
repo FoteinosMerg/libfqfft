@@ -78,6 +78,10 @@ if(CMAKE_COMPILER_IS_GNUCXX OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
   endif()
 endif()
 
+add_definitions(
+  -fPIC
+)
+
 if("${MULTICORE}")
   add_definitions(-DMULTICORE=1)
 endif()
